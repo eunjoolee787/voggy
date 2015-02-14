@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1 class="title">VOGGY</h1>
+</header>
+
+<!-- START OF CONTENT -->
+  <div class="content"> 
+  
+    <div class="row">
+      <div class="large-8 medium-12 small-12 columns">
+        <ul>
+          <li id="location">Honolulu, HI</li>
+          <span id="date">Date</li>
+          <span id="time">Time</li>
+        </ul>
+      </div> <!-- end of large, medium, small -->
+   </div> <!-- end of .row -->
+<!-- END OF CONTENT -->
+
+<!-- START OF THREE CONTENT -->
+<div id="three_content">
+  <h1>Current Conditions</h1>
+  <div class="row">
+    <div class="large-4 medium-4 small-4 columns">
+      <div id="bottom_one" class="bottom_block">
+        <ul>
+          <li class="sicky">
+            <div class="face-smile"></div>
+          </li>
+        <li class="map-3">
+          <div class="map-3"></div>
+        </li>
+      </div> <!-- end of .bottomOne & .bottom_block-->
+    </div> <!-- end of large, medium, small -->
+    <div class="large-4 medium-4 small-4 columns">  
+      <div id="bottom_two" class="bottom_block">
+        <ul>
+          <li class="sicky">
+            <div class="face-plain"></div>
+          </li>
+        <li class="camera-icon">
+          <div class="camera-icon"></div>
+        </li>
+        </ul>
+      </div> <!-- end of .bottomThree & .bottom_block-->
+    </div> <!-- end of large, medium, small --> 
+    <div class="large-4 medium-4 small-4 columns">  
+      <div id="bottom_three" class="bottom_block">
+        <ul>
+          <li class="sicky">
+            <div class="face-sad"></div>
+          </li>
+          <li class="info">
+            <div class="info"></div>
+        </li>
+        </ul>
+      </div> <!-- end of .bottomThree & .bottom_block-->
+    </div> <!-- end of large, medium, small --> 
+  
+  </div> <!-- end of .row -->
+
+  <div class="row">
+    <div class="large-12 medium-12 small-12 columns">
+      <footer>
+        <p class="footer_tag">&copy; voggy</p>
+      </footer>
+    </div> <!-- end of large, medium, small -->
+  </div> <!-- end of .row -->
+</div> <!-- end of #threeContent -->  
+<!-- END OF THREE CONTENT -->
+</div>  <!-- end of .content -->
+
+<script src="/bower_components/foundation/js/vendor/jquery.js"></script>
+<script src="/bower_components/foundation/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+</body>
+</html>
