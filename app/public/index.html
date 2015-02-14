@@ -13,6 +13,8 @@
   <h1 class="title">VOGGY</h1>
 </header>
 
+<div class="screen1">
+
 <!-- START OF CONTENT -->
   <div class="content"> 
   
@@ -38,7 +40,7 @@
             <div class="face-smile"></div>
           </li>
         <li class="map-3">
-          <div class="map-3"></div>
+          <div class="map-3" onclick="switchScreen(3)"></div>
         </li>
       </div> <!-- end of .bottomOne & .bottom_block-->
     </div> <!-- end of large, medium, small -->
@@ -49,7 +51,7 @@
             <div class="face-plain"></div>
           </li>
         <li class="camera-icon">
-          <div class="camera-icon"></div>
+          <div class="camera-icon" onclick="switchScreen(4)"></div>
         </li>
         </ul>
       </div> <!-- end of .bottomThree & .bottom_block-->
@@ -61,7 +63,7 @@
             <div class="face-sad"></div>
           </li>
           <li class="info">
-            <div class="info"></div>
+            <div class="info" onclick="switchScreen(2)"></div>
         </li>
         </ul>
       </div> <!-- end of .bottomThree & .bottom_block-->
@@ -78,12 +80,45 @@
   </div> <!-- end of .row -->
 </div> <!-- end of #threeContent -->  
 <!-- END OF THREE CONTENT -->
+
 </div>  <!-- end of .content -->
+</div>  <!-- end of .screen1 -->
+
+<div class="screen2">
+  <p>More Info Screen</p>
+  <div onclick="switchScreen(1)">BACK</div>
+</div>
+<div class="screen3">
+  <p>Map View Screen</p>
+  <div onclick="switchScreen(1)">BACK</div>
+</div>
+<div class="screen4">
+  <p>Take Picture Screen</p>
+  <div onclick="switchScreen(1)">BACK</div>
+</div>
 
 <script src="/bower_components/foundation/js/vendor/jquery.js"></script>
 <script src="/bower_components/foundation/js/foundation.min.js"></script>
 <script>
   $(document).foundation();
+</script>
+
+<script type="text/javascript">
+  function switchScreen(num) {
+    if (num)
+
+    document.getElementsByClassName("screen1")[0].style.display = "none";
+    document.getElementsByClassName("screen2")[0].style.display = "none";
+    document.getElementsByClassName("screen3")[0].style.display = "none";
+    document.getElementsByClassName("screen4")[0].style.display = "none";
+
+    document.getElementsByClassName("screen" + num)[0].style.display = "";
+  }
+
+  window.onload = function() {
+    switchScreen(1);
+  };  
+
 </script>
 </body>
 </html>
