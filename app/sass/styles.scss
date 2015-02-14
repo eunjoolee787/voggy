@@ -1,0 +1,107 @@
+//colors
+$light-blue: #1ACDCC;
+$dark-gray: #2B2D33;
+//font weight
+$font-bold: 700;
+//TO DO-create mixin for box shawoding
+//TO DO-include mixin for header, main img & feature lists.
+
+@import "http://fonts.googleapis.com/css?family=Lato:300,700.css";
+@import "partials/settings";
+@import "../public/bower_components/foundation/scss/foundation.scss";
+
+@mixin box-shadow(){
+  -webkit-box-shadow: 0 0 5px 3px #ccc7cf;
+  -moz-box-shadow: 0 0 5px 3px #ccc7cf;
+  box-shadow: 0 0 5px 3px #ccc7cf;
+}
+
+header {
+
+  .title {
+    background-color: red;
+    text-align: center;
+  } 
+}
+
+ul {
+  li#location {
+    // background-color: blue;
+    text-decoration: none;
+    font-size: 15px;
+    list-style-type: none;
+  }
+}
+
+span#date {
+  font-size: 20px;
+  margin-left: 5px;
+  width: 100px;
+}
+
+span#time {
+  font-size: 20px;
+}
+
+li.sicky {
+  list-style-type: none;
+
+  .face-smile {
+    background-image: url('/images/face-sad.png');
+    width: 100%;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .face-plain {
+    background-image: url('/images/face-plain.png');
+    width: 100%;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .face-sad {
+    background-image: url('/images/face-sad.png');
+    width: 100%;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+li.map-3 {
+  list-style-type: none;
+  
+  div.map-3 {
+    background-image: url('/images/map-3.png');
+    width: 100%;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+li.camera-icon {
+  list-style-type: none;
+  
+  div.camera-icon {
+    background-image: url('/images/camera-icon.png');
+    width: 100%;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+li.info {
+  list-style-type: none;
+
+  div.info {
+    background-image: url('/images/info.png');
+    width: 100%;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;  
+  }
+}
+
