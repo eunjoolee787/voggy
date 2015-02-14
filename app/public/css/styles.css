@@ -5557,9 +5557,16 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
+body {
+  background-image: url('/images/VolcanoBackground.png');
+  background-repeat: no-repeat;
+  background-size: contain; }
+
 header .title {
-  background-color: red;
-  text-align: center; }
+  background-image: url('/images/VoggyLogo.png');
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat; }
 
 ul li#location {
   text-decoration: none;
