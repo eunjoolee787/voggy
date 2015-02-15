@@ -65,7 +65,7 @@ div.sicky {
     background-image: url('/images/face-sad.png');
   }
 
-  .face-smile,.face-plain, .face-sad {
+  .face-smile, .face-plain, .face-sad {
     @include box-shadow();
     opacity: 0.4;
   }
