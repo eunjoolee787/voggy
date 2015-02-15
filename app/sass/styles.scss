@@ -48,19 +48,22 @@ ul.location_info{
 
 div.sicky {
   list-style-type: none;
-
+  
   .face-smile {
     background-image: url('/images/face-smile.png');
-    @include box-shadow();
   }
   .face-plain {
     background-image: url('/images/face-plain.png');
-    @include box-shadow();
   }
   .face-sad {
     background-image: url('/images/face-sad.png');
-    @include box-shadow();
   }
+
+  .face-smile,.face-plain, .face-sad {
+    @include box-shadow();
+    opacity: 0.4;
+  }
+
 }
 
 div#so_2 {

@@ -85,16 +85,21 @@ $(document).ready( function() {
       if(s02 > 0.6 || s04 > 50) {
         console.log("condition: poor"); 
         // display poor icon face-sad
+        $('.face-sad').css("opacity", "1.0");
       }
       // else, if either or both fair, condition is fair
       else if( (s02 >= 0.1 && s02 <= 0.6) || (s04 >= 12 && s04 <= 50 ) ) {
         console.log("condition: fair"); 
         // display fair icon face-plain
+        $('.face-plain').css("opacity", "1.0");
+
       }
       // else, condition is good 
       else {
         console.log("condition: good"); 
         // display good icon face-smile
+        $('.face-smile').css("opacity", "1.0");
+
       }
 
     });
