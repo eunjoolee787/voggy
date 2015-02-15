@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1 class="title"></h1>
+</header>
+
+<div class="screen1">
+
+
+<!-- START OF CONTENT -->
+<div class="content"> 
+  <div class="location_box">
+    <div class="row">
+      <div class="small-12 columns">
+        <ul class="location_info">
+          <li id="location">Honolulu, HI</li>
+          <li id="date_and_time"><span id="date">Date</span> <span id="time">Time</span></li>  
+        </ul>
+      </div>
+    </div><!-- .row -->
+  </div><!-- .location_box -->
+  <div class="sicky_row">
+    <div class="row">
+      <div class="small-4 columns">
+        <div class="sicky">
+          <div class="face-smile"></div>
+        </div>
+      </div>
+      <div class="small-4 columns">
+        <div class="sicky">
+          <div class="face-plain"></div>
+        </div>
+      </div>
+      <div class="small-4 columns">
+        <div class="sicky">
+          <div class="face-sad"></div>
+        </div>
+      </div>
+    </div><!-- .row -->
+  </div><!-- .sicky_row -->
+  
+  <div id ="so_2">SO<sub>2</sub>: 0.2 ppm</div>
+  <div id ="so_4">SO<sub>4</sub>: 50 &mu;g/m<sup>3</sup></div>
+
+  <footer class="icon_row">
+    <div class="row">
+      <div class="small-4 columns">
+        <div class="map-3" onclick="switchScreen(3)"></div>
+      </div>
+      <div class="small-4 columns">
+        <div class="camera-icon" onclick="switchScreen(4)"></div>
+      </div>
+      <div class="small-4 columns">
+        <div class="info" onclick="switchScreen(2)"></div>
+      </div>
+    </div><!-- .row -->
+  </footer><!-- .icon_row -->
+</div><!-- .content -->
+
+</div>  <!-- end of .screen1 -->
+
+<div class="screen2">
+  <!-- <p>More Info Screen</p> -->
+  <!-- <img src="/images/VoggyInfoPage.png"/> -->
+
+  <p style="color: white;">Volcanic pollutants are primarily a mix of sulfur dioxide (SO2) and various sulfate compounds (SO4) forming as aerosols.  These sulfates form a layer of volcanic smog known as vog.  In general, SO2 concentrations are most intense close to the volcano and SO4 is the major component in outlying areas.</p>
+
+  <p style="color: white;">Volcanic pollution can penetrate the human lung, causing respiratory distress, especially for children and the elderly.  This is a suspected cause of asthma in Hawaii.  Reduction of visibility also represents a hazard to aviation.  For more information on Vog please see: http://weather.hawaii.edu/vmap/</p>
+
+  <div onclick="switchScreen(1)">BACK</div>
+</div>
+<div class="screen3">
+<!--   <p>Map View Screen</p>
+ -->  <div style="width: 500px; height: 500px; background-size: 500px 500px; background-image: url('/images/VogMap.gif'); background-position: center;"></div>
+  <div style="position: absolute; display: inline-block; left: 410px; top: 380px;">
+  <img onclick="document.getElementsByClassName('popup1')[0].style.display = ''; " src="images/map-2.png" width="20" height="20">
+  </div>
+
+  <div class="popup1" style="position: absolute; left: 300px; top: 100px; background-color: white; width: 150px; display: none;">
+  <h3>Kailua-Kona</h1>
+  <h4>2/14, 6:00 pm</h2>
+  <img src="images/face-sad.png" height="40" width="40"/>
+  <p>SO<sub>2</sub>: 2.0 ppm</p>
+  <p>SO<sub>4</sub>: 20 &mu;g/m<sup>3</sup></p>
+  <hr>
+  Haven't seen it this bad in years.
+  </div>
+
+  <div onclick="switchScreen(1)"><img width="50" height="50" src="images/home.png"></div>
+
+
+
+</div>
+<div class="screen4">
+  <p>Take Picture Screen</p>
+
+    <p>A demo of the Camera API, currently implemented in Firefox and Google Chrome on Android. Choose to take a picture with your device's camera and a preview will be shown through createObjectURL or a FileReader object (choosing local files supported too).</p>
+    
+    <p>
+        <input type="file" id="take-picture" accept="image/*">
+    </p>
+
+    <h2>Preview:</h2>
+    <p>
+        <img src="about:blank" alt="" id="show-picture">
+    </p>
+
+    <p id="error"></p>
+
+  <div onclick="switchScreen(1)">BACK</div>
+</div>
+
+<script src="/bower_components/foundation/js/vendor/jquery.js"></script>
+<script src="/bower_components/foundation/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+
+<script type="text/javascript">
+  function switchScreen(num) {
+    if (num)
+
+    document.getElementsByClassName("screen1")[0].style.display = "none";
+    document.getElementsByClassName("screen2")[0].style.display = "none";
+    document.getElementsByClassName("screen3")[0].style.display = "none";
+    document.getElementsByClassName("screen4")[0].style.display = "none";
+
+    document.getElementsByClassName("screen" + num)[0].style.display = "";
+  }
+
+  window.onload = function() {
+    switchScreen(1);
+  };  
+
+    (function () {
+        var takePicture = document.querySelector("#take-picture"),
+            showPicture = document.querySelector("#show-picture");
+
+        if (takePicture && showPicture) {
+            // Set events
+            takePicture.onchange = function (event) {
+                // Get a reference to the taken picture or chosen file
+                var files = event.target.files,
+                    file;
+                if (files && files.length > 0) {
+                    file = files[0];
+                    try {
+                        // Get window.URL object
+                        var URL = window.URL || window.webkitURL;
+
+                        // Create ObjectURL
+                        var imgURL = URL.createObjectURL(file);
+
+                        // Set img src to ObjectURL
+                        showPicture.src = imgURL;
+
+                        // Revoke ObjectURL
+                        URL.revokeObjectURL(imgURL);
+                    }
+                    catch (e) {
+                        try {
+                            // Fallback if createObjectURL is not supported
+                            var fileReader = new FileReader();
+                            fileReader.onload = function (event) {
+                                showPicture.src = event.target.result;
+                            };
+                            fileReader.readAsDataURL(file);
+                        }
+                        catch (e) {
+                            // Display error message
+                            var error = document.querySelector("#error");
+                            if (error) {
+                                error.innerHTML = "Neither createObjectURL or FileReader are supported";
+                            }
+                        }
+                    }
+                }
+            };
+        }
+    })();
+
+
+</script>
+</body>
+</html>
