@@ -50,7 +50,7 @@ div.sicky {
   list-style-type: none;
 
   .face-smile {
-    background-image: url('/images/face-sad.png');
+    background-image: url('/images/face-smile.png');
     @include box-shadow();
   }
   .face-plain {
