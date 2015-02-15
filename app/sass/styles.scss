@@ -9,10 +9,16 @@
   background-size: contain;  
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   background-image: url('/images/VolcanoBackground.png');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  border-bottom: 70px solid black;
 }
 
 header {
@@ -102,3 +108,7 @@ div#so_4 {
   @include box-shadow(); 
 }
 
+footer.icon_row {
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
