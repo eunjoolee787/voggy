@@ -5570,11 +5570,13 @@ header .title {
   background-size: contain;
   margin-left: 40px; }
 
-ul.location_info li {
-  text-decoration: none;
-  font-size: 25px;
-  list-style-type: none;
-  color: white; }
+ul.location_info {
+  margin-left: -5px; }
+  ul.location_info li {
+    text-decoration: none;
+    font-size: 25px;
+    list-style-type: none;
+    color: white; }
 
 div.sicky {
   list-style-type: none; }
@@ -5596,6 +5598,16 @@ div.sicky {
     height: 70px;
     background-repeat: no-repeat;
     background-size: contain; }
+
+div#so_2 {
+  color: white;
+  font-size: 40px;
+  margin-left: 8px; }
+
+div#so_4 {
+  color: white;
+  font-size: 40px;
+  margin-left: 8px; }
 
 .icon_row {
   position: fixed;
