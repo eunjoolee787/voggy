@@ -56,7 +56,8 @@ $(document).ready( function() {
       var curr_date = new Date();
       console.log(curr_date);
 
-      var day = curr_date.getDay();
+      var day = curr_date.getDate();
+      // var day = curr_date.getDay();
       // var day = days[curr_date.getDay()];
       console.log(day);
 
@@ -69,11 +70,14 @@ $(document).ready( function() {
       var hour = curr_date.getHours();
       console.log(hour);
 
+      var min = curr_date.getMinutes();
+      console.log(hour);
+
       console.log(curr_date);
       // console.log(month + " " + day + ", " + year);
-      // $('date').html(month + " " + day + ", " + year);
-      // $('#date').html(month + " " + day + ", " + year);
-      $('#date').html(curr_date);
+      $('#date').html(month + " " + day + ", " + year);
+      $('#time').html(hour + ":" + min);
+      // $('#date').html(curr_date);
 
       var s02 = results[0].SO2;
       var s04 = results[0].SO4;
