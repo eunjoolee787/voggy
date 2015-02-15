@@ -5581,23 +5581,17 @@ ul.location_info {
 div.sicky {
   list-style-type: none; }
   div.sicky .face-smile {
-    background-image: url('/images/face-smile.png');
-    width: 100%;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url('/images/face-smile.png'); }
   div.sicky .face-plain {
-    background-image: url('/images/face-plain.png');
-    width: 100%;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url('/images/face-plain.png'); }
   div.sicky .face-sad {
-    background-image: url('/images/face-sad.png');
+    background-image: url('/images/face-sad.png'); }
+  div.sicky .face-smile, div.sicky .face-plain, div.sicky .face-sad {
     width: 100%;
     height: 70px;
     background-repeat: no-repeat;
-    background-size: contain; }
+    background-size: contain;
+    opacity: 0.4; }
 
 div#so_2 {
   color: white;
