@@ -19,40 +19,40 @@ $font-bold: 700;
 body {
   background-image: url('/images/VolcanoBackground.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 header {
+  // border: 2px solid pink;
 
   .title {
     background-image: url('/images/VoggyLogo.png');
     width: 100%;
     height: 100px;
     background-repeat: no-repeat;
-    // background-size: contain;
+    background-size: contain;
+    margin-left: 40px;
   } 
 }
 
-ul {
-  li#location {
-    // background-color: blue;
+.location_box{
+  // border: 2px solid orange;
+}
+
+ul.location_info{
+  li {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 25px;
     list-style-type: none;
+    color: white;
   }
 }
 
-span#date {
-  font-size: 20px;
-  margin-left: 5px;
-  width: 100px;
+.sicky_row {
+  // border: 2px solid orange;
 }
 
-span#time {
-  font-size: 20px;
-}
-
-li.sicky {
+div.sicky {
   list-style-type: none;
 
   .face-smile {
@@ -78,39 +78,35 @@ li.sicky {
   }
 }
 
-li.map-3 {
-  list-style-type: none;
-  
-  div.map-3 {
-    background-image: url('/images/map-3.png');
-    width: 100%;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.icon_row {
+  // border: 2px solid orange;
+  // background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-li.camera-icon {
-  list-style-type: none;
-  
-  div.camera-icon {
-    background-image: url('/images/camera-icon.png');
-    width: 100%;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.map-3 {
+  background-image: url('/images/map-3.png');
+  width: 100%;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-li.info {
-  list-style-type: none;
+.camera-icon {
+  background-image: url('/images/camera-icon.png');
+  width: 100%;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-  div.info {
-    background-image: url('/images/info.png');
-    width: 100%;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-size: contain;  
-  }
+.info {
+  background-image: url('/images/info.png');
+  width: 100%;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;  
 }
 

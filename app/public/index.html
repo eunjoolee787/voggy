@@ -15,73 +15,53 @@
 
 <div class="screen1">
 
+
 <!-- START OF CONTENT -->
-  <div class="content"> 
-  
+<div class="content"> 
+  <div class="location_box">
     <div class="row">
-      <div class="large-8 medium-12 small-12 columns">
-        <ul>
+      <div class="small-12 columns">
+        <ul class="location_info">
           <li id="location">Honolulu, HI</li>
-          <span id="date">Date</li>
-          <span id="time">Time</li>
+          <li id="date_and_time"><span id="date">Date</span> <span id="time">Time</span></li>  
         </ul>
-      </div> <!-- end of large, medium, small -->
-   </div> <!-- end of .row -->
-<!-- END OF CONTENT -->
+      </div>
+    </div><!-- .row -->
+  </div><!-- .location_box -->
+  <div class="sicky_row">
+    <div class="row">
+      <div class="small-4 columns">
+        <div class="sicky">
+          <div class="face-smile"></div>
+        </div>
+      </div>
+      <div class="small-4 columns">
+        <div class="sicky">
+          <div class="face-plain"></div>
+        </div>
+      </div>
+      <div class="small-4 columns">
+        <div class="sicky">
+          <div class="face-sad"></div>
+        </div>
+      </div>
+    </div><!-- .row -->
+  </div><!-- .sicky_row -->
+  <footer class="icon_row">
+    <div class="row">
+      <div class="small-4 columns">
+        <div class="map-3" onclick="switchScreen(3)"></div>
+      </div>
+      <div class="small-4 columns">
+        <div class="camera-icon" onclick="switchScreen(4)"></div>
+      </div>
+      <div class="small-4 columns">
+        <div class="info" onclick="switchScreen(2)"></div>
+      </div>
+    </div><!-- .row -->
+  </footer><!-- .icon_row -->
+</div><!-- .content -->
 
-<!-- START OF THREE CONTENT -->
-<div id="three_content">
-  <h1>Current Conditions</h1>
-  <div class="row">
-    <div class="large-4 medium-4 small-4 columns">
-      <div id="bottom_one" class="bottom_block">
-        <ul>
-          <li class="sicky">
-            <div class="face-smile"></div>
-          </li>
-        <li class="map-3">
-          <div class="map-3" onclick="switchScreen(3)"></div>
-        </li>
-      </div> <!-- end of .bottomOne & .bottom_block-->
-    </div> <!-- end of large, medium, small -->
-    <div class="large-4 medium-4 small-4 columns">  
-      <div id="bottom_two" class="bottom_block">
-        <ul>
-          <li class="sicky">
-            <div class="face-plain"></div>
-          </li>
-        <li class="camera-icon">
-          <div class="camera-icon" onclick="switchScreen(4)"></div>
-        </li>
-        </ul>
-      </div> <!-- end of .bottomThree & .bottom_block-->
-    </div> <!-- end of large, medium, small --> 
-    <div class="large-4 medium-4 small-4 columns">  
-      <div id="bottom_three" class="bottom_block">
-        <ul>
-          <li class="sicky">
-            <div class="face-sad"></div>
-          </li>
-          <li class="info">
-            <div class="info" onclick="switchScreen(2)"></div>
-        </li>
-        </ul>
-      </div> <!-- end of .bottomThree & .bottom_block-->
-    </div> <!-- end of large, medium, small --> 
-  
-  </div> <!-- end of .row -->
-
-  <div class="row">
-    <div class="large-12 medium-12 small-12 columns">
-      <footer>
-        <p class="footer_tag">&copy; voggy</p>
-      </footer>
-    </div> <!-- end of large, medium, small -->
-  </div> <!-- end of .row -->
-</div> <!-- end of #threeContent -->  
-<!-- END OF THREE CONTENT -->
-
-</div>  <!-- end of .content -->
 </div>  <!-- end of .screen1 -->
 
 <div class="screen2">

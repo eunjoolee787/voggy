@@ -5560,71 +5560,65 @@ th.hide-for-touch {
 body {
   background-image: url('/images/VolcanoBackground.png');
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: cover; }
 
 header .title {
   background-image: url('/images/VoggyLogo.png');
   width: 100%;
   height: 100px;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 40px; }
 
-ul li#location {
+ul.location_info li {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 25px;
+  list-style-type: none;
+  color: white; }
+
+div.sicky {
   list-style-type: none; }
-
-span#date {
-  font-size: 20px;
-  margin-left: 5px;
-  width: 100px; }
-
-span#time {
-  font-size: 20px; }
-
-li.sicky {
-  list-style-type: none; }
-  li.sicky .face-smile {
+  div.sicky .face-smile {
     background-image: url('/images/face-sad.png');
     width: 100%;
     height: 70px;
     background-repeat: no-repeat;
     background-size: contain; }
-  li.sicky .face-plain {
+  div.sicky .face-plain {
     background-image: url('/images/face-plain.png');
     width: 100%;
     height: 70px;
     background-repeat: no-repeat;
     background-size: contain; }
-  li.sicky .face-sad {
+  div.sicky .face-sad {
     background-image: url('/images/face-sad.png');
     width: 100%;
     height: 70px;
     background-repeat: no-repeat;
     background-size: contain; }
 
-li.map-3 {
-  list-style-type: none; }
-  li.map-3 div.map-3 {
-    background-image: url('/images/map-3.png');
-    width: 100%;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-size: contain; }
+.icon_row {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
 
-li.camera-icon {
-  list-style-type: none; }
-  li.camera-icon div.camera-icon {
-    background-image: url('/images/camera-icon.png');
-    width: 100%;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-size: contain; }
+.map-3 {
+  background-image: url('/images/map-3.png');
+  width: 100%;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain; }
 
-li.info {
-  list-style-type: none; }
-  li.info div.info {
-    background-image: url('/images/info.png');
-    width: 100%;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-size: contain; }
+.camera-icon {
+  background-image: url('/images/camera-icon.png');
+  width: 100%;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.info {
+  background-image: url('/images/info.png');
+  width: 100%;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain; }
