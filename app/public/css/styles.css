@@ -5557,10 +5557,15 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
+html {
+  min-height: 100%; }
+
 body {
   background-image: url('/images/VolcanoBackground.png');
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  height: 100%;
+  border-bottom: 70px solid black; }
 
 header .title {
   background-image: url('/images/VoggyLogo.png');
@@ -5628,3 +5633,6 @@ div#so_4 {
   height: 70px;
   background-repeat: no-repeat;
   background-size: contain; }
+
+footer.icon_row {
+  background-color: rgba(0, 0, 0, 0.5); }
