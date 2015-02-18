@@ -10,19 +10,39 @@ $(document).ready( function() {
 function getCurrDateTime() {
     var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
     var curr_date = new Date();
+    var day = days[curr_date.getDay()];
     var month = months[curr_date.getMonth()];
-    var day = curr_date.getDate();
-    // var day = curr_date.getDay();
-    // var day = days[curr_date.getDay()];
+    var date = curr_date.getDate();
     var year = curr_date.getFullYear();
+
+    var today = day + " " + month + " " + date + ", " + year;
+    console.log(today);
+    $('#date').html(today);
+
+    var now;
     var hour = curr_date.getHours();
     var min = curr_date.getMinutes();
-    // convert to 12-hour time with AM/PM
-    console.log(month + " " + day + ", " + year);
-    $('#date').html(month + " " + day + ", " + year);
-    console.log(hour + ":" + min);
-    $('#time').html(hour + ":" + min);
+
+    if(min < 10) {
+      min = "0" + min;
+    }
+
+    if(hour === 0) {
+      now = "12:" + min + "AM";
+    }
+    if(hour === 23) {
+      now = "12:" + min + "PM";
+    } else if(hour > 12) {
+      hour -= 12;
+      now = hour + ":" + min + " PM";
+    } else {
+      now = hour + ":" + min + " AM";
+    }
+
+    console.log(now);
+    $('#time').html(now);
 }
 
 function getLocation() {
