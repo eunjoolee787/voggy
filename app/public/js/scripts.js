@@ -31,8 +31,7 @@ function getCurrDateTime() {
 
     if(hour === 0) {
       now = "12:" + min + "AM";
-    }
-    if(hour === 23) {
+    } else if(hour === 12) {
       now = "12:" + min + "PM";
     } else if(hour > 12) {
       hour -= 12;
